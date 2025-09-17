@@ -160,8 +160,8 @@ fi
 
 if $manageRedroid ; then
     # Let's pull in some help
-    wget 'https://raw.githubusercontent.com/wrinklytesties/mitm_scripts/main/redroid_device.sh' -O redroid_device.sh
-    wget 'https://raw.githubusercontent.com/wrinklytesties/mitm_scripts/main/redroid_host.sh' -O redroid_host.sh 
+    wget 'https://raw.githubusercontent.com/xrated86/mitm_scripts/main/redroid_device.sh' -O redroid_device.sh
+    wget 'https://raw.githubusercontent.com/xrated86/mitm_scripts/main/redroid_host.sh' -O redroid_host.sh
     chmod +x redroid_device.sh
     chmod +x redroid_host.sh
     dos2unix redroid_device.sh

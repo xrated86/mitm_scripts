@@ -564,10 +564,10 @@ pogo_install () {
                     continue  # Skip to the next device
                 fi
             else
-		echo "[pogo] app not installed, preparing to install"
-		rm -rf pogo_bundle/
-		mkdir -p pogo_bundle/
-		unzip -o "$pogo_apk" -d pogo_bundle/ && timeout 5m adb -s "$i" install-multiple -r pogo_bundle/*.apk
+                echo "[pogo] app not installed, preparing to install"
+                rm -rf pogo_bundle/
+                mkdir -p pogo_bundle/
+                unzip -o "$pogo_apk" -d pogo_bundle/ && timeout 5m adb -s "$i" install-multiple -r pogo_bundle/*.apk
             fi
         else
             echo "[pogo] skipping $i due to connection error."

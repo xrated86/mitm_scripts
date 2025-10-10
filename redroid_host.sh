@@ -554,7 +554,7 @@ pogo_install () {
                 echo "[pogo] installed version is '$installed_version'"
 
                 # check if the installed version is outdated
-                if [[ "$(printf '%s\n' "$pogo_version" "$installed_version" | sort -V | head -n1)" != "$installed_version" ]]; then
+                if [[ "$(printf '%s\n' "$installed_version" "$pogo_version" | sort -V | head -n1)" == "$installed_version" && "$installed_version" != "$pogo_version" ]]; then
                     echo "[pogo] installed version is outdated, preparing to update"
                     echo "[pogo] killing app if it exists and uninstalling"
                     adb -s $i shell "su -c 'am force-stop $pogo_package && killall $pogo_package'"
